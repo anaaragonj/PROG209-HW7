@@ -1,0 +1,12 @@
+{
+  "name": "hw6-finalprojectprogress",
+  "version": "1.0.0",
+  "description": "HW7_Prog209",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Ana Aragon",
+  "license": "ISC"
+}

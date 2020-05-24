@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!-- for azure:  all these links must use https, not http -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <title>My First jQuery Mobile Application</title>
+  <link rel="stylesheet" href="mythemes.css" />
+  <link rel="stylesheet" href="jquery.mobile.icons.min.css" />
+  <!-- link rel="stylesheet" type="text/css" href="https://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css"/-->
+  <link rel="stylesheet" type="text/css" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css"/>
+  <script src="https://code.jquery.com/jquery-1.8.2.min.js"> </script>
+  <!--script src="https://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"--></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+   
+
+<!-- HOME PAGE -->
+<div data-role="page" id="Home">
+   <div data-role="header" data-theme='a'> 
+      <h1>My fitness app</h1>
+      <div data-role="navbar">
+         <ul>
+            <li><a href="#fitness" data-icon="star">Fitness</a> </li>
+            <li><a href="#nutrition" data-icon="star">Nutrition</a> </li>
+            <li><a href="#sleep" data-icon="clock">Sleep hours</a> </li>
+         </ul>
+      </div>
+   </div>
+   <div data-role="content" data-theme='a'>
+      <h2>My fitness tracker</h2>
+      <img src="https://i.etsystatic.com/11696295/r/il/eae88d/1092604643/il_794xN.1092604643_hs3w.jpg">
+   </div>
+   <div data-role="footer" data-theme='a'>
+      <h1>Copyright Aragon 2020</h1>
+   </div>
+</div>
+
+<!-- FITNESS PAGE-->
+<div data-role="page" id="fitness">
+   <div data-role="header" data-theme='a'> 
+      <h1>My fitness App</h1>
+      <div data-role="navbar">
+            <ul>
+               <li><a href="#Home" data-icon="home">Home</a> </li>
+               <li><a href="#nutrition" data-icon="star">Nutrition</a> </li>
+               <li><a href="#sleep" data-icon="clock">Sleep hours</a> </li>
+            </ul>
+      </div>
+   </div>
+   <div data-role="content" data-theme='a'>
+     <h2>Report of the day</h2>
+     <table>
+      <ul>
+     <li>Exercise Name <input type="input" size="20" id= "exercisename" ></li><br/>
+     <br/>
+     <li>Reps <input type="input" size="20" id= "reps" ></li><br/>
+     <br/>
+     <li>Sets <input type="input" size="20" id= "sets" ></li><br/>
+     <br/>
+     <li>Weight in Pounds <input type="input" size="20" id= "weight" ></li><br/>
+     <br/>
+    
+     <button id= "AddExercise"> Click to add to your total</button>
+     <br/>
+     <button id= "clearButton2"> Clear</button>
+     <br/>
+     </ul>
+     </table>
+ </div>
+ <div id="output">
+     <p id="output3"></p>
+     <p id="output4"></p>
+ </div>
+     
+   <div data-role="footer" data-theme='a'>
+      <h1>Copyright Aragon 2020</h1>
+   </div>
+</div>
+
+<!-- NUTRITION PAGE-->
+<div data-role="page" id="nutrition">
+
+            <div data-role="header" data-theme='a'> 
+               <h1>Nutrition</h1>
+               <div data-role="navbar">
+                  <ul>
+                     <li><a href="#Home" data-icon="home">Home</a> </li>
+                     <li><a href="#fitness" data-icon="star">Fitness</a> </li>
+                     <li><a href="#sleep" data-icon="clock">Sleep hours</a> </li>
+                  </ul>
+               </div>
+            </div>
+            
+            <div data-role="content" data-theme='a'></div>
+               <div data-role="collapsible" id="info">
+                  <h2>Breakfast</h2>
+                  <table>
+                   <ul>
+                  <li>Name of food: <input type="input" size="20" id= "name" ></li><br/>
+                  <br/>
+                  <li>Calories: <input type="input" size="20" id= "Calories" ></li><br/>
+                  <br/>
+                  <li>How many did you eat: <input type="input" size="20" id= "HowMany" ></li><br/>
+                  <br/>
+                  <button id= "TotalButton"> Click to add to your total</button>
+                  <br/>
+                  <button id= "clearButton"> Clear</button>
+                  <br/>
+                  </ul>
+                  </table>
+               </div>
+               <div id="output">
+                  <p id="output1"></p>
+                  <p id="output2"></p>
+             </div>
+
+
+               <div data-role="collapsible" id="info">
+                  <h2>Lunch</h2>
+                  <table>
+                    <ul>  
+                    <li>Name of food: <input type="input" size="20" id= "namelunch" ></li><br/>
+                   <br/>
+                   <li>Calories: <input type="input" size="20" id= "Calorieslunch" ></li><br/>
+                   <br/>
+                   <li>How many did you eat: <input type="input" size="20" id= "HowManylunch" ></li><br/>
+                   <br/>
+                   <button id= "TotalButtonlunch"> Click to add to your total</button>
+                   <br/>
+                   <button id= "clearButtonlunch"> Clear</button>
+                   <br/>
+                  </ul>
+                  </table>
+               </div>
+             
+              <div id="outputlunch">
+                  <p id="output1lunch"></p>
+                  <p id="output2lunch"></p>        
+              </div>
+           
+                <div data-role="collapsible" id="info">
+                  <h2>Dinner</h2>
+                  <table>
+                    <ul>
+                    <li>Name of food: <input type="input" size="20" id= "namedinner" ></li><br/>
+                   <br/>
+                   <li>Calories: <input type="input" size="20" id= "Caloriesdinner" ></li><br/>
+                   <br/>
+                   <li>How many did you eat: <input type="input" size="20" id= "HowManydinner" ></li><br/>
+                   <br/>
+                   <button id= "TotalButtondinner"> Click to add to your total</button>
+                   <br/>
+                   <button id= "clearButtondinner"> Clear</button>
+                   <br/>
+                  </ul>
+                  </table>
+              
+                </div>
+              <div id="outputdinner">
+                  <p id="output1dinner"></p>
+                  <p id="output2dinner"></p>
+              </div>
+
+             
+               <div data-role="collapsible" id="info">
+                  <h2>Snack</h2>
+                  <table>
+                  <ul>
+                  <li>Name of food: <input type="input" size="20" id= "namesnack" ></li><br/>
+                  <br/>
+                  <li>Calories: <input type="input" size="20" id= "Caloriessnack" ></li><br/>
+                  <br/>
+                  <li>How many did you eat: <input type="input" size="20" id= "HowManysnack" ></li><br/>
+                  <br/>
+                  <button id= "TotalButtonsnack"> Click to add to your total</button>
+                  <br/>
+                  <button id= "clearButtonsnack"> Clear</button>
+                  <br/>
+                  </ul>
+                  </table>
+               </div>
+
+               <div id="outputsnack">
+                     <p id="output1snack"></p>
+                     <p id="output2snack"></p>
+               </div>
+    
+               <div data-role="footer"  data-theme='a'>
+                  <h1>Copyright Aragon 2020</h1>
+               </div>
+         </div>
+
+<!-- SLEEP PAGE-->
+<div data-role="page" id="sleep">
+   <div data-role="header" data-theme='a'> 
+      <h1>Sleep hours</h1>
+      <div data-role="navbar">
+         <ul>
+            <li><a href="#Home" data-icon="home">Home</a> </li>
+            <li><a href="#nutrition" data-icon="star">Nutrition</a> </li>
+            <li><a href="#fitness" data-icon="star">Fitness</a> </li>
+         </ul>
+      </div>
+   </div>
+
+   <div data-role="content" data-theme='a'>
+      <h2>Hours of sleep</h2>
+      <img src="http://www.pethealthnetwork.com/sites/default/files/dog-sleeping-on-pillow-122583050.jpg">
+   </br>
+
+      Night: __________________</br>
+      Nap:  __________________</br>
+
+      Click to add time </br>
+   </div>
+
+   <div data-role="footer"  data-theme='a'>
+       <h1>Copyright Aragon 2020</h1>
+   </div>
+</div>
+
+<script data-main="main.js" src="require.js"></script>
+ </body>
+ </html> 
