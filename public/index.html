@@ -20,6 +20,7 @@
 <div data-role="page" id="Home">
    <div data-role="header" data-theme='a'> 
       <h1>My fitness app</h1>
+     
       <div data-role="navbar">
          <ul>
             <li><a href="#fitness" data-icon="star">Fitness</a> </li>
@@ -30,8 +31,15 @@
    </div>
    <div data-role="content" data-theme='a'>
       <h2>My fitness tracker</h2>
+      <h4>Welcome to my nutrition, sleep hours and excersise tracker</h4>
       <img src="https://i.etsystatic.com/11696295/r/il/eae88d/1092604643/il_794xN.1092604643_hs3w.jpg">
    </div>
+        <h2> The List</h2>
+        <ul id="trackerList"></ul>
+        <button id= "update"> Update</button>
+      </div>
+
+    </div>
    <div data-role="footer" data-theme='a'>
       <h1>Copyright Aragon 2020</h1>
    </div>
@@ -53,19 +61,22 @@
      <h2>Report of the day</h2>
      <table>
       <ul>
-     <li>Exercise Name <input type="input" size="20" id= "exercisename" ></li><br/>
+     <li>Type of Exercise <input type="input" size="20" id= "exercisename" ></li><br/>
      <br/>
      <li>Reps <input type="input" size="20" id= "reps" ></li><br/>
      <br/>
      <li>Sets <input type="input" size="20" id= "sets" ></li><br/>
      <br/>
-     <li>Weight in Pounds <input type="input" size="20" id= "weight" ></li><br/>
+     <li>Total Exercise time <input type="input" size="20" id= "weight" ></li><br/>
      <br/>
     
      <button id= "AddExercise"> Click to add to your total</button>
      <br/>
      <button id= "clearButton2"> Clear</button>
      <br/>
+     <button id= "submit"> Submit</button>
+     <br/>
+     
      </ul>
      </table>
  </div>
@@ -73,6 +84,7 @@
      <p id="output3"></p>
      <p id="output4"></p>
  </div>
+
      
    <div data-role="footer" data-theme='a'>
       <h1>Copyright Aragon 2020</h1>
@@ -108,6 +120,7 @@
                   <br/>
                   <button id= "clearButton"> Clear</button>
                   <br/>
+                  
                   </ul>
                   </table>
                </div>
@@ -178,14 +191,18 @@
                   <br/>
                   <button id= "clearButtonsnack"> Clear</button>
                   <br/>
+                 
+                   <br/>
                   </ul>
                   </table>
+                 
                </div>
 
                <div id="outputsnack">
                      <p id="output1snack"></p>
                      <p id="output2snack"></p>
                </div>
+               <button id= "submit1"> Submit</button>
     
                <div data-role="footer"  data-theme='a'>
                   <h1>Copyright Aragon 2020</h1>
@@ -207,15 +224,25 @@
 
    <div data-role="content" data-theme='a'>
       <h2>Hours of sleep</h2>
+     
       <img src="http://www.pethealthnetwork.com/sites/default/files/dog-sleeping-on-pillow-122583050.jpg">
    </br>
-
-      Night: __________________</br>
-      Nap:  __________________</br>
-
-      Click to add time </br>
+   <ul>  
+      <li>Total hours sleep at night: <input type="input" size="20" id= "night" ></li><br/>
+     <br/>
+     <li>Nap: <input type="input" size="20" id= "nap" ></li><br/>
+     <br/>
+     
+      <button id= "addsleephrs"> Add to your total </button> </br>
+      <button id= "clearBtnSH"> Clear</button><br>
+      <button id= "submit2"> Submit</button>
+     <br/>
    </div>
-
+   <div id="outputsleephrs">
+      <p id="outputsh1"></p>
+      <p id="outputsh2"></p>
+   </div>
+  
    <div data-role="footer"  data-theme='a'>
        <h1>Copyright Aragon 2020</h1>
    </div>
